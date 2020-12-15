@@ -19,11 +19,11 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'ALLOW_CRAFATARAVATAR_MINECRAFTAVATARCRAFATAR_AVATAR_DRIVER_MINECRAFTCRAFATAR'	=> 'Enable Minecraft avatars via Minotar API',
+	'ALLOW_CRAFATARAVATAR_CRAFATARPHPBB_AVATAR_DRIVER_MINECRAFTCRAFATAR'	=> 'Enable Minecraft avatars via Minotar API',
 	'AVATAR_CRAFATAR_ON_REGISTRATION'										=> 'Enable Minecraft avatars via Minotar API on registration',
 
-	'CRAFATARAVATAR_MINECRAFTAVATARCRAFATAR_MINECRAFTCRAFATAR_TITLE'	            => 'Minecraft via Minotar API',
-	'CRAFATARAVATAR_MINECRAFTAVATARCRAFATAR_MINECRAFTCRAFATAR_EXPLAIN'	            => 'Select the preferred options below',
+	'CRAFATARAVATAR_CRAFATARPHPBB_MINECRAFTCRAFATAR_TITLE'	            => 'Minecraft via Minotar API',
+	'CRAFATARAVATAR_CRAFATARPHPBB_MINECRAFTCRAFATAR_EXPLAIN'	            => 'Select the preferred options below',
 
 	'CRAFATAR_AVATAR_NAME'	           => 'Minecraft Username',
 	'CRAFATAR_OPTIONS'		           => 'Type',
