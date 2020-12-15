@@ -1,14 +1,14 @@
 <?php
 /**
 *
-* Minecraft Avatar Extension - minotar.net API
+* Minecraft Avatar Extension - crafatar.net API
 *
 * @copyright (c) 2015 SiteSPlat <info@sitesplat.com>
 * @license GNU General Public License, version 2 (GPL-2.0)
 *
 */
 
-namespace sitesplat\minecraftavatarminotar\event;
+namespace crafataravatar\crafatarphpbb\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -37,50 +37,50 @@ class listener implements EventSubscriberInterface
 
 	public function ucp_register_data_before($event)
 	{
-		if (!intval($this->config['allow_avatar_sitesplat\minecraftavatarminotar\avatar\driver\minecraftminotar']) || !intval($this->config['allow_avatar_minotar_on_registration']))
+		if (!intval($this->config['allow_avatar_crafataravatar\crafatarphpbb\avatar\driver\minecraftcrafatar']) || !intval($this->config['allow_avatar_crafatar_on_registration']))
 		{
 			return;
 		}
 
-		$this->user->add_lang_ext('sitesplat/minecraftavatarminotar', 'minotar');
+		$this->user->add_lang_ext('crafataravatar/crafatarphpbb', 'crafatar');
 
-		$username = $this->request->variable('avatar_minotar_username', '');
-		$options = $this->request->variable('avatar_minotar_options', '');
+		$username = $this->request->variable('avatar_crafatar_username', '');
+		$options = $this->request->variable('avatar_crafatar_options', '');
 
 		$options_html = '';
 		foreach (array('avatar', 'helm', 'skin') as $value)
 		{
 			$selected = ($value == $options) ? ' selected="selected"' : '';
-			$options_html .= '<option value="' . $value . '"' . $selected . '>' . $this->user->lang('MINOTAR_OPTION_' . strtoupper($value)) . '</option>';
+			$options_html .= '<option value="' . $value . '"' . $selected . '>' . $this->user->lang('CRAFATAR_OPTION_' . strtoupper($value)) . '</option>';
 		}
 
 		$event['data'] = array_merge($event['data'], array(
-			'avatar_minotar_username'	=> $username,
-			'avatar_minotar_options'	=> $options,
+			'avatar_crafatar_username'	=> $username,
+			'avatar_crafatar_options'	=> $options,
 		));
 
 		$this->template->assign_vars(array(
-			'S_AVATAR_MINOTAR_REGISTRATION'	=> (int) $this->config['allow_avatar_minotar_on_registration'],
-			'AVATAR_MINOTAR_USERNAME'	=> $username,
-			'AVATAR_MINOTAR_OPTIONS'	=> $options_html,
+			'S_AVATAR_CRAFATAR_REGISTRATION'	=> (int) $this->config['allow_avatar_crafatar_on_registration'],
+			'AVATAR_CRAFATAR_USERNAME'	=> $username,
+			'AVATAR_CRAFATAR_OPTIONS'	=> $options_html,
 		));
 	}
 
 	public function ucp_register_user_row_after($event)
 	{
-		if (!intval($this->config['allow_avatar_sitesplat\minecraftavatarminotar\avatar\driver\minecraftminotar']) || !intval($this->config['allow_avatar_minotar_on_registration']))
+		if (!intval($this->config['allow_avatar_crafataravatar\crafatarphpbb\avatar\driver\minecraftcrafatar']) || !intval($this->config['allow_avatar_crafatar_on_registration']))
 		{
 			return;
 		}
 
-		$username = $this->request->variable('avatar_minotar_username', '');
-		$options = $this->request->variable('avatar_minotar_options', '');
+		$username = $this->request->variable('avatar_crafatar_username', '');
+		$options = $this->request->variable('avatar_crafatar_options', '');
 
 		if ($username != '')
 		{
 			$event['user_row'] = array_merge($event['user_row'], array(
 				'user_avatar'		=> json_encode(array($username, $options)),
-				'user_avatar_type'	=> 'sitesplat.minecraftavatarminotar.minecraftminotar',
+				'user_avatar_type'	=> 'crafataravatar.crafatarphpbb.minecraftcrafatar',
 			));
 		}
 	}

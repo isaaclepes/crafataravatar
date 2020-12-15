@@ -1,6 +1,6 @@
 services:
-    sitesplat.minecraftavatarminotar.minecraftminotar:
-        class: sitesplat\minecraftavatarminotar\avatar\driver\minecraftminotar
+    crafataravatar.crafatarphpbb.minecraftcrafatar:
+        class: crafataravatar\crafatarphpbb\avatar\driver\minecraftcrafatar
         arguments:
             - '@config'
             - '@upload_imagesize'
@@ -9,12 +9,12 @@ services:
             - '@path_helper'
             - '@cache.driver'
         calls:
-            - [set_name, [sitesplat.minecraftavatarminotar.minecraftminotar]]
+            - [set_name, [crafataravatar.crafatarphpbb.minecraftcrafatar]]
         tags:
             - { name: avatar.driver }
 
-    sitesplat.minecraftavatarminotar.listener:
-        class: sitesplat\minecraftavatarminotar\event\listener
+    crafataravatar.crafatarphpbb.listener:
+        class: crafataravatar\crafatarphpbb\event\listener
         arguments:
             - '@user'
             - '@config'
