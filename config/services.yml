@@ -1,0 +1,24 @@
+services:
+    sitesplat.minecraftavatarminotar.minecraftminotar:
+        class: sitesplat\minecraftavatarminotar\avatar\driver\minecraftminotar
+        arguments:
+            - '@config'
+            - '@upload_imagesize'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+            - '@path_helper'
+            - '@cache.driver'
+        calls:
+            - [set_name, [sitesplat.minecraftavatarminotar.minecraftminotar]]
+        tags:
+            - { name: avatar.driver }
+
+    sitesplat.minecraftavatarminotar.listener:
+        class: sitesplat\minecraftavatarminotar\event\listener
+        arguments:
+            - '@user'
+            - '@config'
+            - '@request'
+            - '@template'
+        tags:
+            - { name: event.listener }

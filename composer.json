@@ -1,0 +1,41 @@
+{
+    "name": "sitesplat/minecraftavatarminotar",
+    "type": "phpbb-extension",
+    "description": "This extension enables the use of Minecraft avatars via minotar.net API. This extension supports 2 different skin types. Head 2d and head 2d with helm. The admin can also enable or disable the option on registration page.",
+    "homepage": "http://www.sitesplat.com/",
+    "version": "2.0.1",
+    "time": "2017-01-17",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "minecraft",
+        "avatar",
+        "cosmetic",
+        "sitesplat"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "ThemeSplat (SiteSplat)",
+            "email": "info@sitesplat.com",
+            "homepage": "http://www.sitesplat.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0",
+        "phpbb/phpbb": ">=3.2.0"
+    },
+    "extra": {
+        "display-name": "Minecraft Avatar Extension - minotar.net API",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2.0"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/minotar_minecraft_avatars_%28minotar.net_api%29",
+            "filename": "version_check"
+        }
+    }
+}
