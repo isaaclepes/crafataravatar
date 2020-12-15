@@ -27,7 +27,7 @@ $lang = array_merge($lang, array(
 
 	'CRAFATAR_AVATAR_NAME'	           => 'Minecraft UUID',
 	'CRAFATAR_OPTIONS'		           => 'Type',
-	'AVATAR_CRAFATAR_NAME_EXPLAIN'	   => 'Enter you Minecraft UUID (Check <a href="https://namemc.com/">namemc.com<br />to find your UUID</a>)',
+	'AVATAR_CRAFATAR_NAME_EXPLAIN'	   => 'Enter you Minecraft UUID (Check <a href="https://namemc.com/">namemc.com</a><br />to find your UUID)',
 	'AVATAR_CRAFATAR_OPTIONS_EXPLAIN'   => 'Select the type of avatar',
 	
 	'CRAFATAR_OPTION_AVATARS'	           => '2D Avatar',
