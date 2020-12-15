@@ -1,17 +1,17 @@
 {
-    "name": "sitesplat/minecraftavatarminotar",
+    "name": "crafataravatar/crafatarphpbb",
     "type": "phpbb-extension",
-    "description": "This extension enables the use of Minecraft avatars via minotar.net API. This extension supports 2 different skin types. Head 2d and head 2d with helm. The admin can also enable or disable the option on registration page.",
+    "description": "This extension enables the use of Minecraft avatars via crafatar.com API. This extension supports 3 different skin types. Head 2d, head 3d, body 3d. The admin can also enable or disable the option on registration page.",
     "homepage": "http://www.sitesplat.com/",
-    "version": "2.0.1",
-    "time": "2017-01-17",
+    "version": "2.1.0",
+    "time": "2020-12-15",
     "keywords": [
         "phpbb",
         "extension",
         "minecraft",
         "avatar",
         "cosmetic",
-        "sitesplat"
+        "crafatar"
     ],
     "license": "GPL-2.0",
     "authors": [
@@ -28,14 +28,9 @@
         "phpbb/phpbb": ">=3.2.0"
     },
     "extra": {
-        "display-name": "Minecraft Avatar Extension - minotar.net API",
+        "display-name": "Minecraft Avatar Extension - crafatar.com API",
         "soft-require": {
             "phpbb/phpbb": ">=3.2.0"
         },
-        "version-check": {
-            "host": "www.phpbb.com",
-            "directory": "/customise/db/extension/minotar_minecraft_avatars_%28minotar.net_api%29",
-            "filename": "version_check"
-        }
     }
 }
